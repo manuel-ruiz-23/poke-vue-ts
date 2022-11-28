@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Pokemon: {{ pokemon.name }}</h1>
+    <nuxt-link to="/">Inicio</nuxt-link>
+    <PokeDetails :pokemon="pokemon" />
   </div>
 </template>
 
@@ -24,3 +25,13 @@ export default Vue.extend({
 })
 
 </script>
+
+<style scoped>
+#poke-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+</style>
