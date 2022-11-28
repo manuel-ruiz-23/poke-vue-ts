@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h1>Poke vue Ts</h1>
+    <h1>Poke-Vue-Ts</h1>
     <Search />
-    <List />
+
+    <nuxt-link to="/pokemon/pikachu">Pikachu</nuxt-link>
   </div>
 </template>
 
@@ -12,3 +13,10 @@ export default Vue.extend({
   name: 'IndexPage',
 })
 </script>
+
+<style scoped>
+  h1 {
+    color: #00693E;
+    text-align: center;
+  }
+</style>
