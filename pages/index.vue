@@ -2,8 +2,6 @@
   <div>
     <h1>Poke-Vue-Ts</h1>
     <Search />
-
-    <nuxt-link to="/pokemon/pikachu">Pikachu</nuxt-link>
   </div>
 </template>
 

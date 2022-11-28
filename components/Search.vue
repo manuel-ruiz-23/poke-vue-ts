@@ -10,6 +10,7 @@
     <div v-if="pokemon">
       <p>{{ pokemon.name }}</p>
       <img :src="pokemon.sprites.front_default" />
+      <nuxt-link :to="`/pokemon/${pokemon.name}`">Ver detalles</nuxt-link>
     </div>
 </div>
 </template>
