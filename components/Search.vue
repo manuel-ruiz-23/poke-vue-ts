@@ -3,7 +3,6 @@
     <input placeholder="Pokemon search" @keyup.enter="searchPokemon" type="text" v-model="search" />
     <ButtonCommon @click="searchPokemon">Buscar</ButtonCommon>
     <br />
-    <ButtonCommon to="/pokemon/list">Ver Lista</ButtonCommon>
 
     <div v-if="loading">
       <p>Buscando...</p>
@@ -14,6 +13,9 @@
       <img :src="pokemon.sprites.front_default" />
       <nuxt-link :to="`/pokemon/${pokemon.name}`">Ver detalles</nuxt-link>
     </div>
+    
+
+    <ButtonCommon to="/pokemon/list">Ver Lista</ButtonCommon>
 </div>
 </template>
 
@@ -32,6 +34,7 @@ export default Vue.extend({
   },
   methods: {
     async searchPokemon() {
+      console.log('searching pokemon');
       this.loading = true
       const response = await this.$axios.$get(`https://pokeapi.co/api/v2/pokemon/${this.search}`)
       console.log(response);
